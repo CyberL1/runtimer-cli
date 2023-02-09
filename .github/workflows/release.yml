@@ -44,5 +44,5 @@ jobs:
         uses: ncipollo/release-action@v1.11.2
         with:
           tag: ${{ needs.create-tag.outputs.new_tag }}
-          artifacts: runtimer-${{ matrix.os }}-${{ matrix.arch }}.zip
+          artifacts: runtimercli-${{ matrix.os }}-${{ matrix.arch }}.zip
           allowUpdates: true
