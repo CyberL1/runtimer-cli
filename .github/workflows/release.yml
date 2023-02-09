@@ -39,7 +39,7 @@ jobs:
           export GOARCH=${{ matrix.arch }}
           go build -ldflags "-X runtimercli/constants.Version=${{ needs.create-tag.outputs.new_tag }}"
       - name: Pack binary
-        run: zip runtimer-${{ matrix.os }}-${{ matrix.arch }}.zip runtimer${{ matrix.os == 'windows' && '.exe' || '' }}
+        run: zip runtimer-${{ matrix.os }}-${{ matrix.arch }}.zip runtimercli${{ matrix.os == 'windows' && '.exe' || '' }}
       - name: Create release
         uses: ncipollo/release-action@v1.11.2
         with:
