@@ -1,0 +1,11 @@
+# You can choose which runtime to run by using: runtimer run -r <runtime>
+
+primary: deno
+runtimes:
+  - name: node
+    runtime: node
+  - name: deno
+    runtime: deno
+  - name: node-16.3.0
+    runtime: node
+    version: 16.3.0
