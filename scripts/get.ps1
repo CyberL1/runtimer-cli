@@ -9,7 +9,7 @@ $RuntimerOldExe = "$env:Temp\runtimerold.exe"
 
 $Target = "windows-amd64"
 
-$DownloadUrl = "https://github.com/CyberL1/runtimer/releases/latest/download/runtimer-${Target}.zip"
+$DownloadUrl = "https://github.com/CyberL1/runtimer-cli/releases/latest/download/runtimercli-${Target}.zip"
 
 if (!(Test-Path $RuntimerPath)) {
   New-Item $RuntimerPath -ItemType Directory | Out-Null
@@ -32,5 +32,5 @@ if (!(";${Path};".ToLower() -like "*;${RuntimerPath};*".ToLower())) {
   $Env:Path += ";${RuntimerPath}"
 }
 
-Write-Output "Runtimer was installed to $RuntimerExe"
+Write-Output "Runtimer CLI was installed to $RuntimerExe"
 Write-Output "Run 'runtimer --help' to get started"

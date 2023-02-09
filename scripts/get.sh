@@ -3,7 +3,7 @@
 set -e
 
 if ! command -v unzip > /dev/null; then
-  echo "Error: Unzip is required to install Runtimer"
+  echo "Error: Unzip is required to install Runtimer CLI"
   exit 1
 fi
 
@@ -24,7 +24,7 @@ else
   esac
 fi
 
-download_url="https://github.com/CyberL1/runtimer/releases/latest/download/runtimer-${target}.zip"
+download_url="https://github.com/CyberL1/runtimer-cli/releases/latest/download/runtimercli-${target}.zip"
 
 if [ ! -d $runtimer_dir ]; then
   mkdir -p $runtimer_dir
@@ -39,7 +39,7 @@ else
   rm $runtimer_zip
 fi
 
-echo "Runtimer was installed to $runtimer_exe"
+echo "Runtimer CLI was installed to $runtimer_exe"
 if command -v runtimer > /dev/null; then
   echo "Run 'runtimer --help' to get started"
 else
